@@ -1,8 +1,1 @@
-[
-  {
-    "id": "7759faf8-e99d-4739-b703-218f4544eac8",
-    "nomeTarefa": "banho",
-    "estado": "Em andamento",
-    "descricao": "chuveiro chuveiro"
-  }
-]
+[{"id":"f6651b32-d4f6-44a3-a74a-3719503a4388","nomeTarefa":"banho","estado":"finalizado","descricao":"chuveiro chuveiro"},{"id":"05e500eb-cb16-45e2-9c41-3802cf605a0f","nomeTarefa":"futebol","estado":"Em andamento","descricao":"acertar muito gol"},{"id":"0127a055-0b45-4deb-bd89-08a0f0c07962","nomeTarefa":"lavar prato","estado":"a fazer","descricao":"lavar a pilha de pratos"}]

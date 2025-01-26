@@ -9,24 +9,25 @@ import java.util.Optional;
 
 @Component
 public class Validar {
-    private TaskRepository repository;
-    private TarefaIgualException tarefaIgualException;
+    private final TaskRepository repository;
 
     public Validar(TaskRepository repository) {
         this.repository = repository;
     }
 
     public void ValidarTarefaAdicionar(TaskEntity tarefa) {
-        if (repository.existsByNomeTarefa(tarefa.getNomeTarefa()) && repository.existsByDescricao(tarefa.getDescricao())) {
-            throw new TarefaIgualException("A tarefa já foi cadastrada.");
-        }
+        repository.findByNomeTarefa(tarefa.getNomeTarefa())
+                .ifPresent(existing -> {
+                    throw new TarefaIgualException(existing.getId());
+                });
     }
 
     public void ValidarTarefaAtualizar(String id, TaskEntity tarefa) {
-        Optional<TaskEntity> tarefaExistente = repository.findByNomeTarefa(tarefa.getNomeTarefa());
-        if (tarefaExistente.isPresent() && !tarefaExistente.get().getId().equals(id)) {
-            throw new TarefaIgualException("A tarefa já foi cadastrada.");
-        }
+        repository.findByNomeTarefa(tarefa.getNomeTarefa())
+                .ifPresent(existing -> {
+                    if (!existing.getId().equals(id)) {
+                        throw new TarefaIgualException(existing.getId());
+                    }
+                });
     }
-
 }

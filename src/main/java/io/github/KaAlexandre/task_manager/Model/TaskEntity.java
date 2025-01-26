@@ -3,14 +3,14 @@ package io.github.KaAlexandre.task_manager.Model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tarefas")
+@Table(name = "tarefas")
 public class TaskEntity {
 
     @Id
     @Column
     private String id;
 
-    @Column (name= "nome",unique = true)
+    @Column(name = "nome", unique = true)
     private String nomeTarefa;
     @Column
     private String estado;
@@ -44,6 +44,7 @@ public class TaskEntity {
     public String getId() {
         return id;
     }
+
 
     public void setId(String id) {
         this.id = id;

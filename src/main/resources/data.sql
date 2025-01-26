@@ -1,6 +1,6 @@
-CREATE TABLE Tarefas(
-    id VARCHAR(255) NOT NULL PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
-    estado VARCHAR (50) NOT NULL,
-    descricao VARCHAR (300)
+CREATE TABLE tarefas (
+    id VARCHAR(255) PRIMARY KEY,
+    nome VARCHAR(255) UNIQUE NOT NULL,
+    estado VARCHAR(255),
+    descricao VARCHAR(255)
 );

@@ -1,11 +1,14 @@
 package io.github.KaAlexandre.task_manager.Exceptions;
 
 public class TarefaIgualException extends RuntimeException {
-    public TarefaIgualException() {
-        super("Essa tarefa já foi cadastrada.");
+    private final String id;
+
+    public TarefaIgualException(String id) {
+        super("Tarefa duplicada. ID existente: " + id);
+        this.id = id;
     }
 
-    public TarefaIgualException(String message) {
-        super(message);
+    public String getId() {
+        return id;
     }
 }
