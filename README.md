@@ -15,3 +15,6 @@ Uma api de gerenciamente de tarefas que utiliza o banco postgreSQL, permitindo s
 ![image](https://github.com/user-attachments/assets/70939bb1-4d67-429e-a752-a91109e0990a)
 
 ![image](https://github.com/user-attachments/assets/4acddf7c-dfc4-4eb6-876d-b967d81aa86f)
+
+Obs: caso queira usar o h2 database para usar a api, apenas altere o perfil para o nome h2
+![image](https://github.com/user-attachments/assets/3dc332e1-f615-4358-8b4e-8d68df766ce4)
