@@ -117,11 +117,43 @@ spring:
     username: postgres
     password: sua_senha_segura
 ```
+## 🐘 Acessando o PostgreSQL via pgAdmin (**Caso esteja usando o docker**)
+
+### 1. Acesse o pgAdmin
+Abra o navegador e acesse:
+🔗 http://localhost:5050
+
+### 2. Faça Login
+Email: admin@example.com
+
+Senha: Admin@Secure123
+
+### 3. Adicione o Servidor PostgreSQL
+Clique em "Add New Server".
+
+Na aba "General", dê um nome ao servidor (ex: Docker PostgreSQL).
+
+Na aba "Connection", preencha:
+
+Host name/address: db (nome do serviço no Docker Compose)
+
+Port: 5432
+
+Maintenance database: task_manager
+
+Username: postgres
+
+Password: password (senha definida no docker-compose.yml)
+
+Clique em "Save".
+
+### 4. Explore o Banco de Dados
+Expanda o servidor > Databases > task_manager > Schemas > public > Tables.
+
+Aqui você verá todas as tabelas criadas pela aplicação.
 
 
-
-
-  ### 📡 Endpoints da API
+  ## 📡 Endpoints da API
 
   Criar Tarefa
   
