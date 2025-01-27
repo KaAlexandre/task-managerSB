@@ -1,15 +1,14 @@
+# Task Manager
 
-Pré-requisitos
+Um gerenciador de tarefas simples desenvolvido com Spring Boot.
 
-Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
+## Pré-requisitos
 
-Java Development Kit (JDK): Versão 17 ou superior.
+- JDK 17+
+- Maven 3.6+
+- PostgreSQL (opcional, para o perfil `postgres`)
 
-Maven: Para gerenciamento de dependências e construção do projeto.
-
-PostgreSQL: Se estiver usando o perfil postgres, certifique-se de que o PostgreSQL está instalado e rodando.
-
-Git: Para clonar o repositório.
+# Requisições da api
 
 ![image](https://github.com/user-attachments/assets/38a98e1d-a659-40b5-b7aa-9d617c25c530)
 
@@ -32,6 +31,20 @@ Git: Para clonar o repositório.
 ![image](https://github.com/user-attachments/assets/4acddf7c-dfc4-4eb6-876d-b967d81aa86f)
 
 
-Obs: caso queira usar o h2 database para usar a api, apenas altere o perfil para o nome h2 no applicationn.yml que fica no pacote resources
+Obs: caso queira usar o h2 database para usar a api, apenas altere o perfil para o nome h2 no applicationn.yml que fica no pacote resources, caso for usar o postgreSQL, ceritifique-se de que ele está devidamente configurado!
 
+# H2:
+Alteração do perfil
 ![image](https://github.com/user-attachments/assets/1adae534-8837-423c-b930-033269500b57)
+
+Acesso ao H2 database:
+
+Abra o navegador e acesse http://localhost:9090/h2-console.
+
+Use as seguintes credenciais:
+
+JDBC URL: jdbc:h2:mem:testdb
+
+User Name: sa
+
+Password: password
