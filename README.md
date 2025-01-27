@@ -36,6 +36,7 @@ Obs: caso queira usar o h2 database para usar a api, apenas altere o perfil para
 # Rodando o projeto nos perfis do postgreSQL e do h2
 
 PostgreSQL: mvn spring-boot:run -Dspring-boot.run.profiles=default 
+
 H2: mvn spring-boot:run -Dspring-boot.run.profiles=h2
 
 # Acesso ao H2 database:
