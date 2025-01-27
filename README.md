@@ -33,11 +33,13 @@ Um gerenciador de tarefas simples desenvolvido com Spring Boot.
 
 Obs: caso queira usar o h2 database para usar a api, apenas altere o perfil para o nome h2 no applicationn.yml que fica no pacote resources, caso for usar o postgreSQL, ceritifique-se de que ele está devidamente configurado!
 
-# H2:
-Alteração do perfil
-![image](https://github.com/user-attachments/assets/1adae534-8837-423c-b930-033269500b57)
+# Rodando o projeto nos perfis do postgreSQL e do h2
 
-Acesso ao H2 database:
+PostgreSQL: mvn spring-boot:run -Dspring-boot.run.profiles=default 
+
+H2: mvn spring-boot:run -Dspring-boot.run.profiles=h2
+
+# Acesso ao H2 database:
 
 Abra o navegador e acesse http://localhost:9090/h2-console.
 
