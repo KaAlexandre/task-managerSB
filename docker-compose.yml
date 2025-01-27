@@ -1,0 +1,19 @@
+
+services:
+  app:
+    build: .
+    ports:
+      - "9090:9090"
+    environment:
+      SPRING_PROFILES_ACTIVE: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/task_manager
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: task_manager
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
