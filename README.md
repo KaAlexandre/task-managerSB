@@ -1,3 +1,5 @@
+Uma api de gerenciamente de tarefas que utiliza o banco postgreSQL, permitindo salvar dados, realiza a adição, exclusão, exibição e atuakização de tarefas!
+
 ![image](https://github.com/user-attachments/assets/38a98e1d-a659-40b5-b7aa-9d617c25c530)
 
 
