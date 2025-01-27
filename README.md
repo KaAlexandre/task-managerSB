@@ -1,4 +1,15 @@
-Uma api de gerenciamente de tarefas que utiliza o banco postgreSQL, permitindo salvar dados, realiza a adição, exclusão, exibição e atuakização de tarefas!
+
+Pré-requisitos
+
+Antes de começar, certifique-se de que você tem os seguintes requisitos instalados:
+
+Java Development Kit (JDK): Versão 17 ou superior.
+
+Maven: Para gerenciamento de dependências e construção do projeto.
+
+PostgreSQL: Se estiver usando o perfil postgres, certifique-se de que o PostgreSQL está instalado e rodando.
+
+Git: Para clonar o repositório.
 
 ![image](https://github.com/user-attachments/assets/38a98e1d-a659-40b5-b7aa-9d617c25c530)
 
