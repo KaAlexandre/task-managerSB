@@ -124,7 +124,7 @@ Abra o navegador e acesse:
 🔗 http://localhost:5050
 
 ### 2. Faça Login
-Email: admin@example.com
+Email: admin@exampl1.com
 
 Senha: Admin@Secure123
 
