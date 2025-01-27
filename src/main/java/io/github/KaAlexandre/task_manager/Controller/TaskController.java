@@ -6,6 +6,8 @@ import io.github.KaAlexandre.task_manager.Service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -28,7 +30,15 @@ public class TaskController {
     public Optional<TaskEntity> procurarTarefaPorId(@PathVariable("id") String id) {
         return taskService.obterTarefasPorId(id);
     }
-
+    @GetMapping("/listAll")
+    public ResponseEntity<List<TaskEntity>> getAllTarefas() {
+        return ResponseEntity.ok(taskService.listarTodasTarefas());
+    }
+    @DeleteMapping("/deleteAll")
+    public ResponseEntity<String> deletarTodasTarefas() {
+        taskService.deletarTodasTarefas();
+        return ResponseEntity.ok("Todas as tarefas foram deletadas com sucesso.");
+    }
     @DeleteMapping("/{id}")
     public void deleteTarefa(@PathVariable String id) {
         taskService.deletarTarefa(id);
