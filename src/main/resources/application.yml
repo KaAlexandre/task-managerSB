@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: default
+    active: postgres
   datasource:
     initialization-mode: always
     sql:
@@ -14,7 +14,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: default
+      on-profile: postgres
   datasource:
     url: jdbc:postgresql://localhost:5432/task_manager
     username: postgres
