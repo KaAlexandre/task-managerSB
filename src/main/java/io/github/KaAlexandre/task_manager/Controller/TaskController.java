@@ -30,6 +30,7 @@ public class TaskController {
     public Optional<TaskEntity> procurarTarefaPorId(@PathVariable("id") String id) {
         return taskService.obterTarefasPorId(id);
     }
+
     @GetMapping("/listAll")
     public ResponseEntity<List<TaskEntity>> getAllTarefas() {
         return ResponseEntity.ok(taskService.listarTodasTarefas());
