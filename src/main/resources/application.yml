@@ -3,12 +3,14 @@ server:
 
 spring:
   profiles:
-    active: postgres
+    active: h2
   datasource:
-    initialization-mode: always
     sql:
       init:
         mode: always
+  sql:
+    init:
+      mode: always
 
 ---
 spring:
